@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt"
+    xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>AlgaWorks</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/layout/stylesheets/vendors.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/layout/stylesheets/algaworks.min.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="aw-layout-page">
+		<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand  hidden-xs" href="#">
+						<img alt="AlgaWorks" src="assets/layout/images/logo.png" />
+					</a>
+
+					<ul class="nav  navbar-nav">
+						<li>
+							<a href="#" class="js-sidebar-toggle">
+								<i class="fa  fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<aside class="aw-layout-sidebar  js-sidebar">
+			<div class="aw-layout-sidebar__content">
+
+				<nav class="aw-menu  js-menu">
+					<ul class="aw-menu__list">
+
+						<li class="aw-menu__item">
+							<a href="cadastro-vinho.html">
+								<i class="fa  fa-fw  fa-plus-square"></i>
+
+								<span>Cadastro vinho</span>
+							</a>
+
+							<a href="lista-vinhos.html">
+								<i class="fa  fa-fw  fa-table"></i>
+
+								<span>Lista vinhos</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</aside>
+
+		<section class="aw-layout-content  js-content">
+			<div class="page-header">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-8">
+							<h1>
+								Cadastro vinho
+							</h1>
+						</div>
+
+						<div class="col-xs-4">
+							<div class="aw-page-header-controls">
+								<a class="btn btn-primary" href="lista-vinhos.html">
+									<i class="fa fa-table"></i>
+
+									<span class="hidden-xs hidden-sm">Lista vinhos</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="alert  alert-success">
+					<i class="fa fa-check-circle"></i>
+
+					<span>Mensagem sucesso!</span>
+				</div>
+
+                <div class="alert  alert-danger  alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+
+					<div>
+						<i class="fa fa-exclamation-circle"></i>
+						
+						<span>Mensagem erro.</span>
+					</div>
+				</div>
+
+				<form method="POST" class="form-vertical  js-form-loading">
+					<div class="form-group">
+						<label for="nome">Nome</label>
+
+						<input id="nome" type="text" class="form-control" />
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="tipo">Tipo</label>
+
+								<select id="tipo" class="form-control">
+									<option value="">Selecione o tipo</option>
+									<option>Opção 1</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="valor">Valor</label>
+								
+								<input id="valor" type="text" class="form-control js-moeda" />
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button class="btn  btn-primary" type="submit">Salvar</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer class="aw-layout-footer  js-content">
+			<div class="container-fluid">
+				<span class="aw-footer-disclaimer">&copy; 2017 AlgaWorks. Todos os direitos reservados.</span>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/layout/javascripts/vendors.min.js"></script>
+	<script src="assets/layout/javascripts/algaworks.min.js"></script>
+	<script src="assets/javascripts/vendors/jquery.mask.min.js"></script>
+
+	<script>
+		jQuery('.js-moeda').mask("#.##0,00", { reverse: true });
+	</script>
+</body>
+</html>
